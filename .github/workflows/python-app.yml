@@ -1,0 +1,24 @@
+while True:
+    user_input = input("Enter the temperature in Celsius (type 'exit' to close): ")
+    
+      if user_input.lower() == 'exit':
+        print("Exiting the program.")
+        break
+
+    try:
+        c = float(user_input)  
+        f = (9 * c / 5) + 32  
+        print(f"Temperature in Fahrenheit: {f:.2f}")
+
+        if f < 95:
+            print("Hypothermia")
+        elif 95 <= f < 98.6:
+            print("Normal temperature")
+        elif 98.6 <= f < 100.4:
+            print("Mild fever")
+        elif 100.4 <= f < 109:
+            print("Severe fever")
+        elif f >= 109:
+            print("♦YOU DIED PRESS ANY KEY TO RESPAWN♦")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
